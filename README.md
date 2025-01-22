@@ -1,3 +1,3 @@
 # IDATT2003
 
-Ovinger i faget IDATT2003
+Ovinger i emnet IDATT2003
