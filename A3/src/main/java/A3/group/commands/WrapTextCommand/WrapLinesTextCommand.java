@@ -2,7 +2,16 @@ package A3.group.commands.WrapTextCommand;
 
 import A3.group.commands.TextCommandBase.WrapTextCommand;
 
+/**
+ * The type Wrap lines text command.
+ */
 public class WrapLinesTextCommand extends WrapTextCommand {
+  /**
+   * Instantiates a new Wrap lines text command.
+   *
+   * @param opening the opening
+   * @param end     the end
+   */
   public WrapLinesTextCommand(String opening, String end) {
     super(opening, end);
   }

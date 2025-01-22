@@ -15,7 +15,8 @@ public class CapitalizeSelectionTextCommand extends CapitalizedTextCommand {
     String newSelection = character + selection.substring(1);
 
 
-    return  text.replace(selection, newSelection);  }
+    return  text.replace(selection, newSelection);
+  }
   
   public String getSelection(){
     return selection;
