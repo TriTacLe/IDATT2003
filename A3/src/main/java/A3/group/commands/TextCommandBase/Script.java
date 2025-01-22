@@ -15,6 +15,9 @@ public class Script {
   }
 
   public String execute(String text){
+    if(text == null || text.isBlank()){
+      throw new IllegalArgumentException("Input text cannot be null or empty");
+    }
     for (TextCommand command : textCommands) {
       text = command.execute(text);
     }

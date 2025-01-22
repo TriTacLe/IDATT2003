@@ -10,6 +10,10 @@ public class ReplaceFirstTextCommand extends ReplaceTextCommand {
   
   @Override
   public String execute(String text){
+    if(text == null || text.isBlank()){
+      throw new IllegalArgumentException("Input text cannot be null or empty");
+    }
+    
     return text.replaceFirst(target, replacement);
   }
 }

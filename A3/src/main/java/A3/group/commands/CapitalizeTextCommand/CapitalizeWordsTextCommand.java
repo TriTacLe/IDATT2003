@@ -6,6 +6,9 @@ public class CapitalizeWordsTextCommand extends CapitalizedTextCommand {
   final String selection;
 
   public CapitalizeWordsTextCommand(String selection){
+    if(selection == null || selection.isBlank()){
+      throw new IllegalArgumentException("selection cannot be null or empty");
+    }
     this.selection = selection;
   }  
 
@@ -14,6 +17,10 @@ public class CapitalizeWordsTextCommand extends CapitalizedTextCommand {
    */
   @Override
   public String execute(String text){
+    if(text == null || text.isBlank()){{
+      throw new IllegalArgumentException("Input text cannot be null or empty");
+    }}
+    
     String regex = "[,\\.\\s]";
     String [] words = text.split(regex);
     StringBuilder capitalizedText = new StringBuilder();
@@ -30,6 +37,5 @@ public class CapitalizeWordsTextCommand extends CapitalizedTextCommand {
   public String getSelection() {
     return selection;
   }
-  
-  
 }
+

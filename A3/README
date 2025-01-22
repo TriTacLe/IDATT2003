@@ -101,7 +101,7 @@ CapitalizeTextCommand
 Klassen implementerer TextCommand og endrer en tekst slik at forbokstaven blir stor.
 Eksempel på bruk:
 new CapitalizeTextCommand()
-  .execute("text to be caplitalized")
+  .execute("text to be capitalized")
   → Text to be capitalized
 
 -- CapitalizeWordsTextCommand --
@@ -113,7 +113,7 @@ new CapitalizeWordsTextCommand()
   → Text To Be Capitalized
 
 -- CapitalizeSelectionTextCommand --
-Klassen arver fra CapitalizeTextCommand og endrer en tekst slik at et utvalg får stor
+Klassen arver fra CapitalizedTextCommand og endrer en tekst slik at et utvalg får stor
 forbokstav. Den har et attributt for utvalget (selection). Attributtet settes gjennom
 konstruktøren, og brukes i execute-metoden. Husk også aksessor-metoden getSelection().
 Eksempel på bruk:
