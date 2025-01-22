@@ -36,7 +36,8 @@ Figur 1: Klassediagram for kommandoer
 Oppgave 1: Oppsett av prosjektet
 -----------------------------
 
-Opprett et tomt Maven-prosjekt og gi det en fornuftig groupId og artefactId. Når du svarer på kodeoppgavene under skal filer lagres iht standard Maven-oppsett: enhetstester legges i katalogen “test/java”, mens resten av koden hører hjemme i katalogen “main/java”. Det skal være mulig å bygge, teste og pakke med Maven fra kommandolinja. Det betyr bl.a. at kommandoen «mvn clean package» skal kjøre uten feil.
+Opprett et tomt Maven-prosjekt og gi det en fornuftig groupId og artefactId. Når du svarer på kodeoppgavene under skal filer lagres iht standard Maven-oppsett: enhetstester legges i katalogen “test/java”, mens resten av koden hører hjemme i katalogen “main/java”. Det skal være mulig å bygge, teste og pakke med Maven fra kommandolinja.
+Det betyr bl.a. at kommandoen «mvn clean package» skal kjøre uten feil.
 
 Legg så prosjektet under versjonskontroll. Gjennomfør en første commit før du gyver løs på selve kodinga.
 
@@ -84,8 +85,6 @@ APIet skal ha tre klasser som gjør det mulig å omslutte tekst.
 
 Eksempel på bruk:
 
-java
-Copy
 new WrapTextCommand("<p>", "</p>")
     .execute("text to be wrapped")
 → <p>text to be wrapped</p>
@@ -94,8 +93,6 @@ new WrapTextCommand("<p>", "</p>")
 
 Eksempler på bruk:
 
-java
-Copy
 new WrapLinesTextCommand("<p>", "</p>")
     .execute("first line\nsecond line")
 → <p>first line</p>\n<p>second line</p>
@@ -104,8 +101,6 @@ new WrapLinesTextCommand("<p>", "</p>")
 
 Eksempel på bruk:
 
-java
-Copy
 new WrapSelectionTextCommand("<p>", "</p>", "selection")
     .execute("text with selection")
 → text with <p>selection</p>
@@ -117,8 +112,6 @@ CapitalizeTextCommand Klassen implementerer TextCommand og endrer en tekst slik 
 
 Eksempel på bruk:
 
-java
-Copy
 new CapitalizeTextCommand()
     .execute("text to be capitalized")
 → Text to be capitalized
@@ -127,8 +120,6 @@ new CapitalizeTextCommand()
 
 Eksempel på bruk:
 
-java
-Copy
 new CapitalizeWordsTextCommand()
     .execute("text to be caplitalized")
 → Text To Be Capitalized
@@ -137,8 +128,6 @@ new CapitalizeWordsTextCommand()
 
 Eksempel på bruk:
 
-java
-Copy
 new CapitalizeSelectionTextCommand("selection")
     .execute("text with selection and another selection")
 → text with Selection and another Selection
@@ -155,7 +144,6 @@ Legg merke til at Script har en execute-metode som er lik den som defineres i gr
 Oppgave 7: Terminal-klient (frivillig)
 I utgangspunktet skal enhetstestene være nok for å verifisere at APIet fungerer som forventet. Men hvis du ønsker kan du også lage en klient som gjør det mulig å kjøre tekstkommandoer og skript fra terminalen.
 
-Copy
 
 
 

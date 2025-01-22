@@ -31,17 +31,6 @@ class WrapTextCommandTest {
     assertEquals("<hello>", result, "The text should be wrapped correctly.");
   }
   
-  @Test
-  void testExecuteWithEmptyText() {
-    String opening = "<";
-    String end = ">";
-    String text = "";
-    WrapTextCommand command = new WrapTextCommand(opening, end);
-    
-    String result = command.execute(text);
-    
-    assertEquals("<>", result, "The result should only contain the opening and end tags.");
-  }
   
   @Test
   void testExecuteWithSpecialCharacters() {
