@@ -46,8 +46,6 @@ class ReplaceTextCommandTest {
     
     assertEquals("lorem hallo ipsum dolor sit amet consectetur adipiscing elit", result, "Text should remain unchanged if the target is not found.");
   }
-  
-  
 
   
   @Test
