@@ -21,7 +21,7 @@ public class CapitalizeWordsTextCommand extends CapitalizedTextCommand {
       throw new IllegalArgumentException("Input text cannot be null or empty");
     }}
     
-    String regex = "[,\\.\\s]";
+    String regex = "[,\\.\\s]"; //w3 schools
     String [] words = text.split(regex);
     StringBuilder capitalizedText = new StringBuilder();
 

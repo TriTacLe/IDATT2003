@@ -13,8 +13,8 @@ public class Script {
   
   /**
    * Executes text commands
-   * @param text
-   * @return
+   * @param text text
+   * @return text
    */
   public String execute(String text){
     if(text == null || text.isBlank()){
