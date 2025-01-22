@@ -1,4 +1,4 @@
-package A3.group.commands;
+package A3.group.commands.TextCommandBase;
 
 import static org.junit.jupiter.api.Assertions.*;
 
