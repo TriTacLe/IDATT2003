@@ -1,6 +1,6 @@
-package com.group.commands.TextCommandBase;
+package A3.group.commands.TextCommandBase;
 
-import com.group.commands.TextCommand;
+import A3.group.commands.TextCommand;
 
 public class WrapTextCommand implements TextCommand {
   protected String opening;
@@ -11,6 +11,7 @@ public class WrapTextCommand implements TextCommand {
     this.end = end;
   }
   
+  @Override
   public String execute(String text){
     return opening + text + end;
   }

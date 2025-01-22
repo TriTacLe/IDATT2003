@@ -1,6 +1,6 @@
-package com.group.commands.CapitalizeTextCommand;
+package A3.group.commands.CapitalizeTextCommand;
 
-import com.group.commands.TextCommandBase.CapitalizedTextCommand;
+import A3.group.commands.TextCommandBase.CapitalizedTextCommand;
 
 public class CapitalizeSelectionTextCommand extends CapitalizedTextCommand {
   private final String selection;
@@ -9,9 +9,13 @@ public class CapitalizeSelectionTextCommand extends CapitalizedTextCommand {
     this.selection = selection;
   }
   
+  @Override
   public String execute(String text){
-    return text;//Placeholder
-  }
+    char character = Character.toUpperCase(this.selection.charAt(0));
+    String newSelection = character + selection.substring(1);
+
+
+    return  text.replace(selection, newSelection);  }
   
   public String getSelection(){
     return selection;

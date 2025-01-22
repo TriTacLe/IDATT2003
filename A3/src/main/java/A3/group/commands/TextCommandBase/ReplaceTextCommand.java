@@ -1,6 +1,6 @@
-package com.group.commands.TextCommandBase;
+package A3.group.commands.TextCommandBase;
 
-import com.group.commands.TextCommand;
+import A3.group.commands.TextCommand;
 
 public class ReplaceTextCommand implements TextCommand {
   protected String target;
@@ -11,6 +11,7 @@ public class ReplaceTextCommand implements TextCommand {
     this.replacement = replacement;
   }
   
+  @Override
   public String execute(String text){
     return text.replace(target, replacement);
   }

@@ -1,6 +1,6 @@
-package com.group.commands.ReplaceTextCommand;
+package A3.group.commands.ReplaceTextCommand;
 
-import com.group.commands.TextCommandBase.ReplaceTextCommand;
+import A3.group.commands.TextCommandBase.ReplaceTextCommand;
 
 public class ReplaceFirstTextCommand extends ReplaceTextCommand {
 
@@ -8,6 +8,7 @@ public class ReplaceFirstTextCommand extends ReplaceTextCommand {
     super(target, replacement);
   }
   
+  @Override
   public String execute(String text){
     return text.replaceFirst(target, replacement);
   }
