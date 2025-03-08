@@ -1,7 +1,8 @@
 package A3.group.commands.TextCommandBase;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * Test class for CapitalizedTextCommand.
@@ -47,6 +48,7 @@ class CapitalizedTextCommandTest {
     
     String result = command.execute(text);
     
-    assertEquals("  hello world", result, "The text should remain unchanged when leading whitespace is present.");
+    assertEquals("  hello world", result,
+        "The text should remain unchanged when leading whitespace is present.");
   }
 }

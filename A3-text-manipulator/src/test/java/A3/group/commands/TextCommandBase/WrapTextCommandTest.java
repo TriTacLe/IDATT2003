@@ -1,8 +1,7 @@
 package A3.group.commands.TextCommandBase;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import A3.group.commands.TextCommandBase.WrapTextCommand;
 import org.junit.jupiter.api.Test;
 
 class WrapTextCommandTest {
@@ -41,6 +40,7 @@ class WrapTextCommandTest {
     
     String result = command.execute(text);
     
-    assertEquals("[hello @world!]", result, "The text with special characters should be wrapped correctly.");
+    assertEquals("[hello @world!]", result,
+        "The text with special characters should be wrapped correctly.");
   }
 }

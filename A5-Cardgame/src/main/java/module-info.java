@@ -1,8 +1,5 @@
 module no.ntnu.trondheim.a5cardgame {
-    requires javafx.controls;
-    requires javafx.fxml;
+  requires javafx.controls;
 
-
-    opens no.ntnu.trondheim.a5cardgame to javafx.fxml;
-    exports no.ntnu.trondheim.a5cardgame;
+  exports no.ntnu.trondheim.a5cardgame;
 }
