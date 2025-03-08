@@ -61,8 +61,7 @@
                         <!-- Default configuration for running with: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>no.ntnu.trondheim.a5cardgame/no.ntnu.trondheim.a5cardgame.HelloApplication
-                            </mainClass>
+                            <mainClass>no.ntnu.trondheim.a5cardgame/no.ntnu.trondheim.a5cardgame.CardGameApp</mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
                             <jlinkImageName>app</jlinkImageName>
