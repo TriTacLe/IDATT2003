@@ -1,6 +1,7 @@
 package main.java.no.ntnu.trondheim.a5cardgame.model;
 
 public enum Rank {
+  ACE(1, "Ace"),
   TWO(2, "Two"),
   THREE(3, "Three"),
   FOUR(4, "Four"),
@@ -12,8 +13,7 @@ public enum Rank {
   TEN(10, "Ten"),
   JACK(11, "Jack"),
   QUEEN(12, "Queen"),
-  KING(13, "King"),
-  ACE(14, "Ace");
+  KING(13, "King");
 
   private final int value;
   private final String name;
