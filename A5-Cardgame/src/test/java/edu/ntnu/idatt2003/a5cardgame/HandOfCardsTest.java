@@ -1,11 +1,13 @@
 package edu.ntnu.idatt2003.a5cardgame;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
+import java.util.List;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import java.util.List;
-import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * Positive tests for the HandOfCards class.
@@ -13,6 +15,9 @@ import static org.junit.jupiter.api.Assertions.*;
 class HandOfCardsPositiveTest {
   private HandOfCards hand;
 
+  /**
+   * Sets up.
+   */
   @BeforeEach
   void setUp() {
     hand = new HandOfCards(List.of(
@@ -24,21 +29,33 @@ class HandOfCardsPositiveTest {
     ));
   }
 
+  /**
+   * Test is flush.
+   */
   @Test
   void testIsFlush() {
     assertTrue(hand.isFlush());
   }
 
+  /**
+   * Test sum values.
+   */
   @Test
   void testSumValues() {
     assertEquals(36, hand.sumValues());
   }
 
+  /**
+   * Test contains queen of spades.
+   */
   @Test
   void testContainsQueenOfSpades() {
     assertFalse(hand.containsQueenOfSpades());
   }
 
+  /**
+   * Test hearts in hand.
+   */
   @Test
   void testHeartsInHand() {
     assertEquals("H2 H5 H7 H10 H12", hand.heartsInHand());
@@ -51,6 +68,9 @@ class HandOfCardsPositiveTest {
 class HandOfCardsNegativeTest {
   private HandOfCards hand;
 
+  /**
+   * Sets up.
+   */
   @BeforeEach
   void setUp() {
     hand = new HandOfCards(List.of(
@@ -62,21 +82,33 @@ class HandOfCardsNegativeTest {
     ));
   }
 
+  /**
+   * Test is not flush.
+   */
   @Test
   void testIsNotFlush() {
     assertFalse(hand.isFlush());
   }
 
+  /**
+   * Test sum values incorrect.
+   */
   @Test
   void testSumValuesIncorrect() {
     assertNotEquals(50, hand.sumValues());
   }
 
+  /**
+   * Test contains queen of spades.
+   */
   @Test
   void testContainsQueenOfSpades() {
     assertTrue(hand.containsQueenOfSpades());
   }
 
+  /**
+   * Test hearts in hand with no hearts.
+   */
   @Test
   void testHeartsInHandWithNoHearts() {
     HandOfCards noHeartsHand = new HandOfCards(List.of(
