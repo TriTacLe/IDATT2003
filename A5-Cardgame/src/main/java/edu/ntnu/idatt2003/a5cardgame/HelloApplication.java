@@ -1,4 +1,4 @@
-package no.ntnu.trondheim.cardgame;
+package edu.ntnu.idatt2003.a5cardgame;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
