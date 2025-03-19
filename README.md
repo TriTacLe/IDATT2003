@@ -10,6 +10,7 @@ Hver mappe i prosjektet representerer en spesifikk øving, og inneholder nødven
 ### Oversikt over mapper
 
 - `A3`: Øving 3 API-utvikling med fokus på arv og implementasjon av pipeline
+- `A5`: Øving 5 med fokus på implemetasjon av JavaFX uten FXML
 
 ## Krav
 
@@ -26,12 +27,17 @@ For å kjøre dette prosjektet trenger du:
    ```
 2. Naviger til ønsket øving:
    ```bash
-   cd Oving1
+   cd Oving3
+   cd Oving5
    ```
 3. Bygg og kjør programmet ved hjelp av Maven:
    ```bash
    mvn clean install
    mvn exec:java
+   ```
+   For Oving5:
+   ```bash
+   mvn javafx:run
    ```
 
 ## Læringsmål
@@ -40,19 +46,9 @@ Hensikten med øvingene er å:
 
 - Forstå og anvende objektorienterte prinsipper som innkapsling, arv og polymorfi.
 - Bygge robuste og vedlikeholdbare systemer ved hjelp av testdrevne utviklingsmetoder.
-- Arbeide med eksterne systemer som databaser og GUI-komponenter.
-
-## Bidrag
-
-Bidrag til prosjektet er velkomne! Følg disse stegene:
-
-1. Lag en fork av prosjektet.
-2. Opprett en ny branch for din funksjon eller feilretting:
-   ```bash
-   git checkout -b ny-funksjon
-   ```
-3. Gjør dine endringer og legg til commits.
-4. Send en pull request for vurdering.
+- Arbeide med eksterne systemer som filhåndtering og GUI-komponenter.
+- JavaFX
+- 
 
 ## Lisens
 
@@ -60,5 +56,3 @@ Dette prosjektet er lisensiert under [MIT-lisensen](LICENSE). Du står fritt til
 henhold til lisensbetingelsene.
 
 ---
-
-Happy coding! 🚀
