@@ -1,7 +1,8 @@
 package A3.group.commands.TextCommandBase;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * Test class for ReplaceTextCommand.
@@ -17,7 +18,8 @@ class ReplaceTextCommandTest {
     
     String result = command.execute(text);
     
-    assertEquals("hi world", result, "The target word should be replaced with the replacement text.");
+    assertEquals("hi world", result,
+        "The target word should be replaced with the replacement text.");
   }
   
   @Test
@@ -29,7 +31,8 @@ class ReplaceTextCommandTest {
     
     String result = command.execute(text);
     
-    assertEquals("orange kule and apple juice", result, "All occurrences of the target word should be replaced.");
+    assertEquals("orange kule and apple juice", result,
+        "All occurrences of the target word should be replaced.");
   }
   
   /**
@@ -44,9 +47,10 @@ class ReplaceTextCommandTest {
     
     String result = command.execute(text);
     
-    assertEquals("lorem hallo ipsum dolor sit amet consectetur adipiscing elit", result, "Text should remain unchanged if the target is not found.");
+    assertEquals("lorem hallo ipsum dolor sit amet consectetur adipiscing elit", result,
+        "Text should remain unchanged if the target is not found.");
   }
-
+  
   
   @Test
   void testGetTarget() {

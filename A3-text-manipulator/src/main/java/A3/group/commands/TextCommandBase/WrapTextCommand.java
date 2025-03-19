@@ -18,18 +18,18 @@ public class WrapTextCommand implements TextCommand {
   }
   
   @Override
-  public String execute(String text){
+  public String execute(String text) {
     if (text == null || text.isBlank()) {
       throw new IllegalArgumentException("Text cannot be null or empty");
     }
     return opening + text + end;
   }
   
-  public String getOpening(){
+  public String getOpening() {
     return opening;
   }
   
-  public String getEnd(){
+  public String getEnd() {
     return end;
   }
 }

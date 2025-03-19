@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>no.ntnu.trondheim</groupId>
+  <groupId>edu.ntnu.idatt2003</groupId>
   <artifactId>A5-Cardgame</artifactId>
   <version>1.0-SNAPSHOT</version>
   <name>A5-Cardgame</name>
@@ -58,7 +58,7 @@
             <!-- Default configuration for running with: mvn clean javafx:run -->
             <id>default-cli</id>
             <configuration>
-              <mainClass>no.ntnu.trondheim.a5cardgame/no.ntnu.trondheim.a5cardgame.HelloApplication</mainClass>
+              <mainClass>edu.ntnu.idatt2003.a5cardgame/edu.ntnu.idatt2003.a5cardgame.App</mainClass>
               <launcher>app</launcher>
               <jlinkZipName>app</jlinkZipName>
               <jlinkImageName>app</jlinkImageName>

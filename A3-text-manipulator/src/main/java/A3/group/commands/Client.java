@@ -5,7 +5,10 @@ import A3.group.commands.ReplaceTextCommand.ReplaceFirstTextCommand;
 import A3.group.commands.TextCommandBase.CapitalizedTextCommand;
 import A3.group.commands.TextCommandBase.ReplaceTextCommand;
 import A3.group.commands.TextCommandBase.WrapTextCommand;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.InputMismatchException;
+import java.util.List;
+import java.util.Scanner;
 
 /**
  * Main class

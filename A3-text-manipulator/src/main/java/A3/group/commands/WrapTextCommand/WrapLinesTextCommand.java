@@ -14,17 +14,17 @@ public class WrapLinesTextCommand extends WrapTextCommand {
    */
   public WrapLinesTextCommand(String opening, String end) {
     super(opening, end);
-    if (opening == null || opening.isBlank()){
+    if (opening == null || opening.isBlank()) {
       throw new IllegalArgumentException("Opening cannot be null/blank");
     }
-    if (end == null || end.isBlank()){
+    if (end == null || end.isBlank()) {
       throw new IllegalArgumentException("End cannot be null/blank");
     }
   }
   
   @Override
   public String execute(String text) {
-    if (text == null || text.isBlank()){
+    if (text == null || text.isBlank()) {
       throw new IllegalArgumentException("Text cannot be null/blank");
     }
     return opening + text + end;
