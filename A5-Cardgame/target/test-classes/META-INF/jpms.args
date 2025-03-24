@@ -1,0 +1,4 @@
+--patch-module
+edu.ntnu.idatt2003.a5cardgame=_
+--add-reads
+edu.ntnu.idatt2003.a5cardgame=ALL-UNNAMED
