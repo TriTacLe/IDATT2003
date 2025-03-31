@@ -1,24 +1,40 @@
 package edu.ntnu.idatt2003.a5cardgame;
 
+import java.util.List;
 import javafx.application.Application;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
-import javafx.scene.control.*;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
-import javafx.scene.layout.*;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.ScrollPane;
+import javafx.scene.control.TextField;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
-import java.util.List;
 
+/**
+ * The type App.
+ */
 public class App extends Application {
   private DeckOfCards deck;
   private List<Card> currentHand;
   private Label handLabel, flushLabel, queenLabel, heartsLabel, sumLabel;
   private TextField cardCountField;
   private HBox cardDisplay;
+
+  /**
+   * The entry point of application.
+   *
+   * @param args the input arguments
+   */
+  public static void main(String[] args) {
+    launch(args);
+  }
 
   @Override
   public void start(Stage primaryStage) {
@@ -32,7 +48,8 @@ public class App extends Application {
 
     cardCountField = new TextField("5");
     cardCountField.setMaxWidth(50);
-    cardCountField.setStyle("-fx-font-weight: bold; -fx-font-size: 20px; -fx-background-color: #FFC0CB; -fx-border-color: #ffffff");
+    cardCountField.setStyle(
+        "-fx-font-weight: bold; -fx-font-size: 20px; -fx-background-color: #FFC0CB; -fx-border-color: #ffffff");
 
     handLabel = new Label("Hand: ");
     flushLabel = new Label("Flush: ");
@@ -40,11 +57,16 @@ public class App extends Application {
     heartsLabel = new Label("Hearts: ");
     sumLabel = new Label("Sum of Faces: ");
 
-    handLabel.setStyle("-fx-font-weight: bold; -fx-font-size: 20px; -fx-background-color: #FFC0CB; -fx-border-color: #ffffff");
-    flushLabel.setStyle("-fx-font-weight: bold; -fx-font-size: 20px; -fx-background-color: #FFC0CB; -fx-border-color: #ffffff");
-    queenLabel.setStyle("-fx-font-weight: bold; -fx-font-size: 20px; -fx-background-color: #FFC0CB; -fx-border-color: #ffffff");
-    heartsLabel.setStyle("-fx-font-weight: bold; -fx-font-size: 20px; -fx-background-color: #FFC0CB; -fx-border-color: #ffffff");
-    sumLabel.setStyle("-fx-font-weight: bold; -fx-font-size: 20px; -fx-background-color: #FFC0CB; -fx-border-color: #ffffff");
+    handLabel.setStyle(
+        "-fx-font-weight: bold; -fx-font-size: 20px; -fx-background-color: #FFC0CB; -fx-border-color: #ffffff");
+    flushLabel.setStyle(
+        "-fx-font-weight: bold; -fx-font-size: 20px; -fx-background-color: #FFC0CB; -fx-border-color: #ffffff");
+    queenLabel.setStyle(
+        "-fx-font-weight: bold; -fx-font-size: 20px; -fx-background-color: #FFC0CB; -fx-border-color: #ffffff");
+    heartsLabel.setStyle(
+        "-fx-font-weight: bold; -fx-font-size: 20px; -fx-background-color: #FFC0CB; -fx-border-color: #ffffff");
+    sumLabel.setStyle(
+        "-fx-font-weight: bold; -fx-font-size: 20px; -fx-background-color: #FFC0CB; -fx-border-color: #ffffff");
 
     cardDisplay = new HBox(15);
     cardDisplay.setAlignment(Pos.CENTER);
@@ -57,7 +79,8 @@ public class App extends Application {
     HBox buttonBox = new HBox(10, dealButton, checkButton);
     buttonBox.setAlignment(Pos.CENTER);
     HBox inputBox = new HBox(10, new Label("How many cards to deal:"), cardCountField);
-    inputBox.setStyle("-fx-font-weight: bold; -fx-font-size: 20px; -fx-background-color: #FFC0CB; -fx-border-color: #ffffff");
+    inputBox.setStyle(
+        "-fx-font-weight: bold; -fx-font-size: 20px; -fx-background-color: #FFC0CB; -fx-border-color: #ffffff");
     inputBox.setAlignment(Pos.CENTER);
     VBox resultsBox = new VBox(10, flushLabel, queenLabel, heartsLabel, sumLabel);
     resultsBox.setAlignment(Pos.CENTER);
@@ -80,7 +103,9 @@ public class App extends Application {
   }
 
   private void checkHand() {
-    if (currentHand == null) return;
+    if (currentHand == null) {
+      return;
+    }
     HandOfCards hand = new HandOfCards(currentHand);
     flushLabel.setText("Flush: " + (hand.isFlush() ? "Yes" : "No"));
     queenLabel.setText("Queen of Spades: " + (hand.containsQueenOfSpades() ? "Yes" : "No"));
@@ -121,9 +146,5 @@ public class App extends Application {
 
     gc.fillText(suitSymbol + " " + card.getValue(), 10, 25);
     gc.fillText(suitSymbol + " " + card.getValue(), 60, 120);
-  }
-
-  public static void main(String[] args) {
-    launch(args);
   }
 }

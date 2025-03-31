@@ -1,3 +1,5 @@
-edu/ntnu/idatt2003/a5cardgame/HelloApplication.class
+edu/ntnu/idatt2003/a5cardgame/DeckOfCards.class
+edu/ntnu/idatt2003/a5cardgame/App.class
 module-info.class
-edu/ntnu/idatt2003/a5cardgame/HelloController.class
+edu/ntnu/idatt2003/a5cardgame/Card.class
+edu/ntnu/idatt2003/a5cardgame/HandOfCards.class
